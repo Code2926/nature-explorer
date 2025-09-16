@@ -1,0 +1,193 @@
+/* ------------------------------
+   GENERAL STYLES
+------------------------------ */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ------------------------------
+   HEADER / NAV
+------------------------------ */
+
+header {
+    background-color: #ecf0f1;
+    padding: 10px 0;
+}
+
+nav {
+    display: inline-block; /* Assignment requirement */
+    width: 80%;           /* Assignment requirement */
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* Commenting out previous li styling as per instructions */
+/* li {
+    color: red;
+} */
+
+/* Descendant selector for nav image */
+nav img {
+    width: 10%;
+    vertical-align: middle;
+}
+
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
+
+.hero {
+    text-align: center;
+    color: #fff;
+    padding: 80px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #27ae60;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #2ecc71;
+}
+
+/* ------------------------------
+   GRID CLASS
+------------------------------ */
+
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%; /* Two-column grid */
+    gap: 20px 10%;                 /* row-gap and column-gap */
+    justify-content: space-between; 
+    align-items: stretch;
+    padding: 40px 20px;
+}
+
+/* Descendant selector for images inside .grid only */
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* ------------------------------
+   FLEX CLASS
+------------------------------ */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* adjust spacing */
+    gap: 15px;
+    padding: 40px 20px;
+}
+
+.flex img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .flex img {
+    flex: 1 1 45%;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 70px 15px;
+  }
+
+  .flex img {
+    flex: 1 1 100%;
+    height: 200px;
+  }
+
+  .grid {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+}
